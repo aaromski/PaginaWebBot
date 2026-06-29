@@ -10,10 +10,10 @@ export function Hero() {
   const [tilt, setTilt] = useState({ x: 0, y: 0 })
   const [mensajeActual, setMensajeActual] = useState(0);
   const conversacion = [
-    { sender: "user", text: "¿Tienen disponibilidad para hoy?" },
-    { sender: "bot", text: "¡Hola! Sí, tengo espacio a las 2:00 PM o 4:00 PM." },
-    { sender: "user", text: "Perfecto, a las 4:00 PM me queda bien." },
-    { sender: "bot", text: "Reservado. ¿Necesitas algo más?" },
+    { sender: "user", text: "Hola, ¿tienen pizzas disponibles?" },
+    { sender: "bot", text: "¡Hola! Sí, tenemos pepperoni y hawaiana. ¿Cuál deseas?" },
+    { sender: "user", text: "Una pepperoni, por favor." },
+    { sender: "bot", text: "Excelente. El total son 12 USD. ¿Confirmas tu pedido?" },
   ];
 
   const [mensajesVisibles, setMensajesVisibles] = useState<typeof conversacion>([]);
@@ -56,14 +56,13 @@ export function Hero() {
             IA conversacional a medida
           </span>
           <h1 className="mt-5 text-balance text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-            Potencia tu atención al cliente.{" "}
+            Automatiza tus ventas y pedidos.{" "}
             <span className="bg-gradient-to-r from-brand to-chart-2 bg-clip-text text-transparent">
-              Bots con IA personalizados,
-            </span>{" "}
-            creados para ti.
+              Asistentes con IA a medida para negocios, tiendas y comercios digitales.
+            </span>
           </h1>
           <p className="mt-6 max-w-md text-pretty leading-relaxed text-muted-foreground">
-            Reduce tus tiempos de respuesta en un 80% y escala 24/7 con agentes conversacionales a medida. Integrados, inteligentes y sin esfuerzo.
+            Agentes inteligentes que toman pedidos, consultan tu inventario y validan pagos automáticamente 24/7.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
@@ -83,9 +82,9 @@ export function Hero() {
 
           <dl className="mt-12 grid max-w-md grid-cols-3 gap-6">
             {[
-              { v: "80%", l: "Respuestas más rápidas" },
-              { v: "24/7", l: "Disponibilidad total" },
-              { v: "5min", l: "De despliegue" },
+              { v: "24/7", l: "Ventas automatizadas" }, // Antes: Disponibilidad total
+              { v: "100%", l: "Pedidos organizados" }, // Antes: Respuestas más rápidas
+              { v: "Cero", l: "Errores en cálculos" },  // Refleja tu manejo de tasa BCV
             ].map((s) => (
                 <div key={s.l}>
                   <dt className="text-2xl font-bold text-brand">{s.v}</dt>

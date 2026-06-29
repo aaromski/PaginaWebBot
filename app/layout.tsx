@@ -10,7 +10,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'CogniBot — Bots con IA a medida para atención al cliente',
+  title: 'AutoBot — Bots con IA a medida para atención al cliente',
   description:
     'Reduce response times by 80% and scale 24/7 with bespoke conversational AI agents. Integrated, intelligent, effortless.',
   generator: 'v0.app',

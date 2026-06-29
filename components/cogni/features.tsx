@@ -19,34 +19,33 @@ interface Feature {
 const FEATURES: Feature[] = [
   {
     icon: Clock,
-    title: "Disponibilidad 24/7",
-    description: "Garantiza atención al cliente ininterrumpida con agentes que nunca duermen ni toman descansos.",
+    title: "Ventas 24/7",
+    description: "Toma pedidos automáticamente, sin importar la hora, eliminando tiempos de espera.",
   },
   {
     icon: SlidersHorizontal,
-    title: "Personalización de Nicho",
-    description: "Bots ajustados a tu industria, tono y flujos de trabajo para conversaciones verdaderamente relevantes.",
-  },
-  {
-    icon: Plug,
-    title: "Integración con tu CRM",
-    description: "Conecta tus herramientas actuales para que cada conversación se mantenga perfectamente sincronizada.",
-    featured: true,
+    title: "Catálogo Inteligente",
+    description: "El bot conoce tus productos, precios y disponibilidad en tiempo real.",
   },
   {
     icon: LineChart,
-    title: "Dashboard de Métricas",
-    description: "Monitorea tiempos de respuesta, tasas de resolución y satisfacción con analíticas en tiempo real.",
+    title: "Dashboard de Caja",
+    description: "Visualiza tus ventas y gestiona tus ingresos en un solo lugar con métricas claras.",
   },
   {
     icon: ShieldCheck,
-    title: "Seguridad Profesional",
-    description: "Encriptación de datos, controles de acceso y cumplimiento integrados en cada despliegue.",
+    title: "Cálculos Precisos",
+    description: "Conversiones de divisas y tasas BCV automáticas, eliminando errores matemáticos manuales.",
+  },
+  {
+    icon: Plug,
+    title: "Canales de Venta",
+    description: "Atención nativa en WhatsApp y Telegram donde tus clientes ya están.",
   },
   {
     icon: Globe,
-    title: "Alcance Global y Multilingüe",
-    description: "Atiende a tus clientes en su propio idioma en cualquier región, automáticamente.",
+    title: "Escalabilidad Total",
+    description: "Un asistente que crece con tu negocio, manejando múltiples pedidos simultáneamente.",
   },
 ]
 

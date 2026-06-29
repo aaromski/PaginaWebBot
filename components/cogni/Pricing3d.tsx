@@ -4,18 +4,42 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Check } from "lucide-react";
 
 const PLANS = [
-    { id: 0, name: "Básico", price: "Consultar", features: ["1 Bot personalizado", "Integración básica", "Soporte 24/7"], details: "Ideal para automatizar tareas repetitivas sencillas." },
-    { id: 1, name: "Pro", price: "Consultar", features: ["Hasta 5 Bots", "CRM avanzado", "Analítica en tiempo real", "Soporte prioritario"], details: "Solución para escalabilidad con integraciones profundas." },
-    { id: 2, name: "Enterprise", price: "Personalizado", features: ["Bots ilimitados", "API propia", "Seguridad nivel bancario", "Gerente de cuenta"], details: "Despliegue robusto y personalizado para alto volumen." },
+    {
+        id: 0,
+        name: "Básico",
+        price: "$10/mes",
+        features: ["1 Bot personalizado", "Integración estándar", "Soporte 24/7"],
+        details: "Automatización eficiente para negocios en etapa inicial."
+    },
+    {
+        id: 1,
+        name: "Pro",
+        price: "$50/mes",
+        features: ["Hasta 5 Bots", "CRM avanzado", "Analítica en tiempo real", "Soporte técnico dedicado"],
+        details: "Optimización de flujos con herramientas de gestión profesional."
+    },
+    {
+        id: 2,
+        name: "Empresa",
+        price: "$100/mes",
+        features: ["Bots ilimitados", "Acceso a API", "Seguridad avanzada y auditoría", "Asesor de éxito exclusivo"],
+        details: "Infraestructura robusta con acompañamiento estratégico personalizado."
+    },
 ];
 
 export function Pricing3D() {
     const [activeId, setActiveId] = useState<number | null>(1);
 
     return (
-        <section className="py-24 px-4">
+        <section className="py-26 px-4">
             {/* Contenedor flexible con separación (gap-6) */}
-            <div className="mx-auto max-w-5xl flex flex-wrap justify-center items-start gap-6">
+
+            <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold text-white mb-4">Planes de Automatización</h2>
+                <p className="text-slate-400">Elige el plan que mejor se adapte al crecimiento de tu negocio.</p>
+            </div>
+
+            <div className="py-20 mx-auto max-w-5xl flex flex-wrap justify-center items-start gap-6">
                 {PLANS.map((plan) => {
                     const isActive = plan.id === activeId;
 
@@ -52,7 +76,7 @@ export function Pricing3D() {
                                     >
                                         <p className="text-sm text-slate-400 mb-6">{plan.details}</p>
                                         <button className="w-full py-3 rounded-xl bg-brand font-bold text-slate-950 hover:opacity-90 transition">
-                                            Contactar asesor
+                                            Seleccionar Plan
                                         </button>
                                     </motion.div>
                                 )}

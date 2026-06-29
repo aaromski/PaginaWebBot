@@ -34,7 +34,7 @@ export function SiteHeader() {
           <span className="flex size-9 items-center justify-center rounded-xl bg-brand-soft text-brand ring-1 ring-brand/40">
             <Bot className="size-5" aria-hidden="true" />
           </span>
-            <span className="text-lg font-semibold tracking-tight">CogniBot</span>
+            <span className="text-lg font-semibold tracking-tight">AutoBot Solutions</span>
           </a>
 
           <nav className="hidden items-center gap-8 md:flex" aria-label="Principal">

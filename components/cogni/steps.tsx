@@ -11,25 +11,30 @@ interface Step {
 const STEPS: Step[] = [
   {
     icon: Search,
-    title: "Descubrimiento",
-    description: "Mapeamos tus flujos de soporte, tono de voz y las preguntas que tus clientes hacen con más frecuencia.",
+    title: "Análisis de Datos",
+    description: "La IA analiza tu catálogo, inventario o base de conocimientos para entender qué ofrece tu negocio.",
   },
   {
     icon: Settings2,
-    title: "Configuración",
-    description: "Tu bot se entrena con tus datos y se conecta a tu CRM, documentos y canales.",
+    title: "Entrenamiento Inteligente",
+    description: "Configuramos los parámetros de respuesta, tono de voz y reglas de negocio para asegurar precisión.",
   },
   {
     icon: Rocket,
-    title: "Lanzamiento",
-    description: "Publica un asistente con tu marca en la web, chat y aplicaciones de mensajería.",
+    title: "Despliegue Multi-Canal",
+    description: "Tu asistente queda activo en WhatsApp, Telegram o Web, listo para atender a tus clientes al instante.",
   },
   {
     icon: PlugZap,
-    title: "Optimización",
-    description: "El ajuste continuo basado en conversaciones reales mantiene tus tasas de resolución en aumento.",
+    title: "Gestión Automatizada",
+    description: "Tu sistema recibe pedidos, consultas y transacciones, centralizando todo en tu panel de control.",
   },
 ]
+
+
+
+
+
 
 export function Steps() {
   return (

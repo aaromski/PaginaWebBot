@@ -11,7 +11,7 @@ const COLUMNS = [
   },
   {
     heading: "Contacto",
-    links: ["hola@cognibot.com", "+1 100 00 0000", "Bolivar, Venezuela"], // Cambiado para localización
+    links: ["AutoBotSolutions@gmail.com", "+1 100 00 0000", "Bolivar, Venezuela"], // Cambiado para localización
   },
 ]
 
@@ -25,7 +25,7 @@ export function SiteFooter() {
               <span className="flex size-9 items-center justify-center rounded-xl bg-brand-soft text-brand ring-1 ring-brand/40">
                 <Bot className="size-5" aria-hidden="true" />
               </span>
-                <span className="text-lg font-semibold tracking-tight">CogniBot</span>
+                <span className="text-lg font-semibold tracking-tight">AutoBot Solutions</span>
               </a>
               <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
                 Bots con IA a medida que automatizan tu atención al cliente y escalan conversaciones sin esfuerzo.
@@ -52,7 +52,7 @@ export function SiteFooter() {
           </div>
 
           <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-glass-border pt-6 text-xs text-muted-foreground sm:flex-row">
-            <p>© {new Date().getFullYear()} CogniBot. Todos los derechos reservados.</p>
+            <p>© {new Date().getFullYear()} AutoBot Solutions. Todos los derechos reservados.</p>
             <p className="flex gap-4">
               <a href="#" className="transition-colors hover:text-foreground">
                 Privacidad
