@@ -30,10 +30,19 @@ const PLANS = [
 export function Pricing3D() {
     const [activeId, setActiveId] = useState<number | null>(1);
 
-    return (
-        <section className="py-26 px-4">
-            {/* Contenedor flexible con separación (gap-6) */}
+    const handleSelectPlan = (e: React.MouseEvent, planName: string) => {
+        // Evita que el click cierre la tarjeta contenedora
+        e.stopPropagation();
 
+        // Redirige a la sección de contacto (asumiendo que tiene id="contacto")
+        window.location.hash = "#pricing";
+
+        // Opcional: Si quieres hacer un scroll suave manual en lugar del hash nativo:
+        // document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    return (
+        <section id="precio" className="py-26 px-4">
             <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold text-white mb-4">Planes de Automatización</h2>
                 <p className="text-slate-400">Elige el plan que mejor se adapte al crecimiento de tu negocio.</p>
@@ -46,11 +55,11 @@ export function Pricing3D() {
                     return (
                         <motion.div
                             key={plan.id}
-                            layout // Anima la expansión/contracción automáticamente
+                            layout
                             onClick={() => setActiveId(isActive ? null : plan.id)}
                             className={`cursor-pointer rounded-3xl border p-8 transition-all duration-300 flex flex-col 
                 ${isActive
-                                ? "w-72 bg-slate-900/90 border-brand shadow-2xl shadow-brand/30" // Mantiene el ancho original (w-72)
+                                ? "w-72 bg-slate-900/90 border-brand shadow-2xl shadow-brand/30"
                                 : "w-72 bg-slate-950/50 border-white/5 opacity-60 hover:opacity-100"
                             }`}
                         >
@@ -75,9 +84,16 @@ export function Pricing3D() {
                                         className="mt-4 border-t border-white/10 pt-6 overflow-hidden"
                                     >
                                         <p className="text-sm text-slate-400 mb-6">{plan.details}</p>
-                                        <button className="w-full py-3 rounded-xl bg-brand font-bold text-slate-950 hover:opacity-90 transition">
+
+                                        {/* Botón convertido a motion.button con efectos de click y hover */}
+                                        <motion.button
+                                            whileHover={{ scale: 1.04 }}
+                                            whileTap={{ scale: 0.96 }}
+                                            onClick={(e) => handleSelectPlan(e, plan.name)}
+                                            className="w-full py-3 rounded-xl bg-brand font-bold text-slate-950 transition-colors hover:bg-brand/90"
+                                        >
                                             Seleccionar Plan
-                                        </button>
+                                        </motion.button>
                                     </motion.div>
                                 )}
                             </AnimatePresence>

@@ -6,9 +6,9 @@ import { cn } from "@/lib/utils"
 
 const NAV = [
   { label: "Inicio", href: "#home" },
-  { label: "Cómo funciona", href: "#how-it-works" },
   { label: "Beneficios", href: "#benefits" },
-  { label: "Precios", href: "#pricing" },
+  { label: "Cómo funciona", href: "#how-it-works" },
+  { label: "Precios", href: "#precio" },
 ]
 
 export function SiteHeader() {
